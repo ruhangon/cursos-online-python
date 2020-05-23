@@ -15,12 +15,21 @@ class Conta:
         print("valor adicionado a conta")
 
     def saca(self, valor):
-        self.__saldo-=valor
-        print("valor retirado da conta")
+        if (self.__pode_saque(valor)):
+            self.__saldo-=valor
+            print("valor retirado da conta")
+        else:
+            print("O saque não foi possível pois você não tem dinheiro suficiente")
 
     def transfere(self, valor, destino):
-        self.saca(valor)
-        destino.deposita(valor)
+        if (self.__pode_saque(valor)):
+            self.saca(valor)
+            destino.deposita(valor)
+        else:
+            print("A conta de origem não tem dinheiro suficiente")
+
+    def __pode_saque(self, valor):
+        return valor<=(self.__saldo+self.__limite)
 
     @property
     def titular(self):
@@ -37,6 +46,14 @@ class Conta:
     @limite.setter
     def limite(self, limite):
         self.__limite=limite
+
+    @staticmethod
+    def codigo_banco():
+        return "001"
+
+    @staticmethod
+    def codigos_bancos():
+        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
 
     # a palavra chave pass serve para fazer esse código funcionar
     pass
