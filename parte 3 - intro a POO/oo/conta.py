@@ -22,6 +22,22 @@ class Conta:
         self.saca(valor)
         destino.deposita(valor)
 
+    @property
+    def titular(self):
+        return self.__titular
+
+    @property
+    def saldo(self):
+        return self.__saldo
+
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite=limite
+
     # a palavra chave pass serve para fazer esse código funcionar
     pass
 
