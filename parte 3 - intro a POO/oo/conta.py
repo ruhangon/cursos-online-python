@@ -55,6 +55,3 @@ class Conta:
     def codigos_bancos():
         return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
 
-    # a palavra chave pass serve para fazer esse código funcionar
-    pass
-
