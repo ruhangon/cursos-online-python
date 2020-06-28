@@ -10,5 +10,8 @@ vingadores.dar_likes()
 see.dar_likes()
 see.dar_likes()
 
-print('o filme {} tem {} likes'.format(vingadores.nome, vingadores.likes))
-print('a série {} tem {} likes'.format(see.nome, see.likes))
+lista=[vingadores, see]
+
+for programa in lista:
+    print(programa)
+

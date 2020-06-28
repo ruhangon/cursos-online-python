@@ -4,6 +4,9 @@ class Programa:
         self.ano=ano
         self._likes=0
 
+    def __str__(self):
+        return f'Nome: {self.nome} Likes: {self.likes}'
+
     @property
     def likes(self):
         return self._likes
