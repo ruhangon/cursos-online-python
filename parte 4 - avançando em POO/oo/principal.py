@@ -23,8 +23,8 @@ the_morning_show.dar_likes()
 lista=[vingadores_g_i, vingadores_u, see, the_morning_show]
 minha_playlist = Playlist('fim de semana', lista)
 
-for programa in minha_playlist.listagem:
+for programa in minha_playlist:
     print(programa)
 
-print('tamanho da playlist: {}'.format(len(minha_playlist.listagem)))
+print('tamanho: {}'.format(len(minha_playlist)))
 
